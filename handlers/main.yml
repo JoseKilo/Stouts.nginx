@@ -2,6 +2,8 @@
 
 - name: nginx restart
   service: name={{nginx_service_name}} state=restarted
+  become: yes
 
 - name: nginx reload
   service: name={{nginx_service_name}} state=reloaded
+  become: yes
