@@ -10,5 +10,7 @@
   when: nginx_apt_use_ppa_repo and ansible_distribution == "Ubuntu"
 
 - name: Install Dependencies
-  apt: name={{item}}
-  with_items: [ nginx, python-passlib ] 
+  apt:
+    name:
+      - nginx
+      - python-passlib
